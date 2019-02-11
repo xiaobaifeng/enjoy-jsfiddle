@@ -1,6 +1,8 @@
 const path = require('path')
 
 module.exports = {
-  publicPath: 'https://xiaobaifeng.github.io/xiaobaifeng/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/xiaobaifeng/'
+    : '/',
   outputDir: 'docs'
 }

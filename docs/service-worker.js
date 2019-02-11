@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://xiaobaifeng.github.io/xiaobaifeng/precache-manifest.e808304c03f24c6bc969ce892d75e195.js"
+  "/xiaobaifeng/precache-manifest.2a73b7260ad14861bb560e9cff405510.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hello-world"});
