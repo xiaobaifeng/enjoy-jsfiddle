@@ -14,7 +14,7 @@
   output: {
     path: '/Users/fedev01/Documents/learn/hello-world/docs',
     filename: '[name].js',
-    publicPath: '/',
+    publicPath: 'https://xiaobaifeng.github.io/xiaobaifeng/',
     globalObject: 'this'
   },
   resolve: {
@@ -1114,7 +1114,7 @@
       {
         'process.env': {
           NODE_ENV: '"development"',
-          BASE_URL: '"/"'
+          BASE_URL: '"https://xiaobaifeng.github.io/xiaobaifeng/"'
         }
       }
     ),
