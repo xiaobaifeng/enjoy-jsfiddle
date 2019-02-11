@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "/xiaobaifeng/js/chunk-vendors.fb18aed6.js"
   },
   {
-    "revision": "b1db12111f5eb2f8ec3f",
-    "url": "/xiaobaifeng/js/app.ac689397.js"
+    "revision": "ae4af5476de74ce14b92",
+    "url": "/xiaobaifeng/js/app.8b45a4e6.js"
   },
   {
-    "revision": "69ce53d6ad17bc2a287b0137e6b7b607",
+    "revision": "cc6b72c7312e078a796e44c241357bdb",
     "url": "/xiaobaifeng/index.html"
   },
   {
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/xiaobaifeng/css/jsfiddle.b0a5f725.css"
   },
   {
-    "revision": "b1db12111f5eb2f8ec3f",
+    "revision": "ae4af5476de74ce14b92",
     "url": "/xiaobaifeng/css/app.2c1874c9.css"
   }
 ];
