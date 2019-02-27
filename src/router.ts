@@ -21,5 +21,10 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "jsfiddle" */ '@/views/Jsfiddle.vue'),
     },
+    {
+      path: '/html2image',
+      name: 'html2image',
+      component: () => import('@/views/html2image.vue'),
+    },
   ],
 });

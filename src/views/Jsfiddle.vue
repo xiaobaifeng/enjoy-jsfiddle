@@ -39,6 +39,7 @@ export default class Jsfiddle extends Vue {
 <style lang="scss" scope>
 .jsfiddle{
   display: flex;
+  height: 100%;
   padding: 0 10px;
   background-color: #f5f7f973;
   &__slider-nav{
