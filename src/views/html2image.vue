@@ -2,12 +2,23 @@
   <div class="html2image">
     <div class="html2image__handel">
       <!-- <button @click="html2canvasHandle">html2canvas</button> -->
-      <button @click="html2imageHandle">html2image</button>
+      <div>
+        sourceOpt<br>
+        width: <input v-model="sourceOpt.width" type='text' /><br>
+        backgroundColor: <input v-model="sourceOpt.backgroundColor" type='color' /><br>
+        color: <input v-model="sourceOpt.color" type='color' />
+      </div>
+      <pre>{{ sourceOpt }}</pre>
+      <div>
+        <button @click="html2imageHandle">html2image</button>
+      </div>
     </div>
     <div class="html2image__content">
       <div class="html2image__content__item">
         <h2>source</h2>
-        <div class="html2image__content__source" id="source">
+        <div
+          class="html2image__content__source" id="source"
+          :style="sourceOpt">
           <h2 class="html2image__content__source__title">{{ title }}</h2>
           <img src="../assets/68747470733a2f2f706963322e7a68696d672e636f6d2f37313337373464353338336437323662316362386536623665663438666430645f622e706e67.png" />
           <div class="html2image__content__source__content">好的程序员能够独立的解决某个技术难题，主动的关心项目进度与潜在瓶颈，
@@ -20,7 +31,9 @@
             一定能写出合适的优质的代码。另一方面，好的架构都是衍化而来，不同的行业领域、应用场景、界面交互的需求都会引发架构的
             衍化。我们需要抱着开放的心态，不断地提取公共代码，保证合适的复用程度。同时也要避免过度抽象而带来的一系列问题。</div>
           <div class="html2image__content__source__href">
-            <a :href="sourceHref">{{ sourceHref }}</a>
+            <div>
+              {{ sourceHref }}
+            </div>
             <img src="../assets/XN.jpg" />
           </div>
         </div>
@@ -47,6 +60,11 @@ import Canvas2Image from '../utils/canvas2image';
 export default class Jsfiddle extends Vue {
   private title: string = '前后端分离与全栈架构';
   private sourceHref: string = 'https://github.com/wxyyxc1992/Web-Series';
+  private sourceOpt: any = {
+    width: '400px',
+    backgroundColor: '#a9a9a9',
+    color: '#2c3e50',
+  };
   private html2imageHandle(): void {
     const defaultContainer = document.createElement('div');
     defaultContainer.innerText = 'id = "source"的dom不存在';
@@ -73,6 +91,8 @@ export default class Jsfiddle extends Vue {
   box-sizing: border-box;
   &__handel{
     min-width: 600px;
+    padding: 20px;
+    text-align: left;
     button{
       margin-top: 20px;
       font-size: 24px;
@@ -98,8 +118,8 @@ export default class Jsfiddle extends Vue {
         line-height: 60px;
       }
       &__content{
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 24px;
+        line-height: 40px;
         text-align: left;
         text-indent: 48px;
       }
@@ -109,7 +129,7 @@ export default class Jsfiddle extends Vue {
       &__href{
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
         margin-top: 10px;
         padding: 10px;
         border: 3px solid #ffc107;
@@ -117,8 +137,8 @@ export default class Jsfiddle extends Vue {
           width: auto;
           height: 100px;
         }
-        a{
-          padding-right: 30px;
+        div{
+          flex-grow: 1;
         }
       }
     }
