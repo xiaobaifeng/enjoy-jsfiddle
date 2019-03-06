@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/jsfiddle">Jsfiddle</router-link> | 
-      <router-link to="/html2image">html2image</router-link>
+      <router-link to="/html2image">html2image</router-link> | 
+      <router-link to="/hottable">hottable</router-link>
     </div>
     <div id="content">
       <router-view />
@@ -28,6 +29,7 @@
   width: 100%;
   padding: 30px;
   background-color: #6d85b9;
+  z-index: 9999;
   a {
     font-weight: bold;
     color: #2c3e50;

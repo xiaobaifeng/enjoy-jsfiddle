@@ -26,5 +26,10 @@ export default new Router({
       name: 'html2image',
       component: () => import('@/views/html2image.vue'),
     },
+    {
+      path: '/hottable',
+      name: 'hottable',
+      component: () => import('@/views/hot-table.vue'),
+    },
   ],
 });
