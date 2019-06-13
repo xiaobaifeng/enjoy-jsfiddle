@@ -16,6 +16,8 @@
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
     "no-console": false,
-    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
+    "vue/no-parsing-error": [2, {
+      "x-invalid-end-tag": false
+    }]
   }
 }
